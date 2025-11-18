@@ -1,8 +1,8 @@
 import './App.css'
 import {Welcome} from './welcome'
-import {Button} from './Button'
-import { Hello, HellloNojsx } from './Hello'
-import { Card } from './Card'
+import { UserInfo } from './UserInfo'
+import { UserCard } from './UserCard'
+import { CardWrapper } from './CardWrapper'
 function App() {
   
 
@@ -12,14 +12,17 @@ function App() {
         <h1>
             react tutorial
         </h1>
-        <Welcome/>
-        <Hello/> 
-        <HellloNojsx/>      
-        <Button/>
+        <Welcome name="Peter Parker" alias= "Spider-man"/>
+        <UserCard name="pinku" age={28} city= "delhi" email="pinkupanda@gmail.com"/>
+        <CardWrapper Title="User Profile">
+          <p>Bruce Wayne</p>
+          <p>batman@jl.com</p>
+          <button>Edit Profile</button>
+        </CardWrapper>
       </div>
       <Card/>
     </>
-  )
+  );
 }
 
 export default App

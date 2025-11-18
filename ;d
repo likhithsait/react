@@ -1,0 +1,23 @@
+[33mcommit 67452b3c990f3cec529b4764e3cea6a1480c7630[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: likhithsait <likhithsai.t@narayanagroup.com>
+Date:   Tue Nov 18 13:48:32 2025 +0530
+
+    jsxrules
+
+[33mcommit e49a54ca0712009d51f5abfe0ce55cb2f53bfe83[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: likhithsait <likhithsai.t@narayanagroup.com>
+Date:   Tue Nov 18 12:48:25 2025 +0530
+
+    import, export and named exports  importing ocmponents from other filels
+
+[33mcommit 6b7a514fcde27b3ef1131fe096e9241ae87f86e7[m
+Author: likhithsait <likhithsai.t@narayanagroup.com>
+Date:   Tue Nov 18 12:29:15 2025 +0530
+
+    Components basics
+
+[33mcommit 37cf19894642b1dd5ea2579b359a946abfb2ff04[m
+Author: likhithsait <likhithsai.t@narayanagroup.com>
+Date:   Tue Nov 18 12:01:20 2025 +0530
+
+    helloworld
