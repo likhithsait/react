@@ -20,10 +20,11 @@ function App() {
           <p>batman@jl.com</p>
           <button>Edit Profile</button>
         </CardWrapper>
-        <UserDetails name="bruce" isOnline={false}></UserDetails>
-        <UserDetails name= "clark" isOnline={true}></UserDetails>
-        <UserDetails name= "peter" isOnline={true}></UserDetails>
+        <UserDetails name="bruce" isOnline={false} isPremium={true} role="ViP"></UserDetails>
+        <UserDetails name= "clark" isOnline={true} isnew={true} role="admin"></UserDetails>
+        <UserDetails name= "peter" isOnline={true} isPremium={true} isnew={true} role="hero"></UserDetails>
       </div>
+    
     </>
   );
 }
