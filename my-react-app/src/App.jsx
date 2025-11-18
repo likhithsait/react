@@ -3,6 +3,7 @@ import {Welcome} from './welcome'
 import { UserInfo } from './UserInfo'
 import { UserCard } from './UserCard'
 import { CardWrapper } from './CardWrapper'
+import { UserDetails } from './UserDetails'
 function App() {
   
 
@@ -19,6 +20,9 @@ function App() {
           <p>batman@jl.com</p>
           <button>Edit Profile</button>
         </CardWrapper>
+        <UserDetails name="bruce" isOnline={false}></UserDetails>
+        <UserDetails name= "clark" isOnline={true}></UserDetails>
+        <UserDetails name= "peter" isOnline={true}></UserDetails>
       </div>
     </>
   );
