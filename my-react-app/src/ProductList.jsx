@@ -18,7 +18,7 @@ export const ProductList=()=>{
     ];
     const product_elements=product.map((p)=>{
                     return (
-                        <div>
+                        <div key={p.id}>
                             <h3>{p.name}</h3>
                             <p>{p.price}$</p>
                         </div>
