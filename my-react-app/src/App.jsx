@@ -4,6 +4,7 @@ import { UserInfo } from './UserInfo'
 import { UserCard } from './UserCard'
 import { CardWrapper } from './CardWrapper'
 import { UserDetails } from './UserDetails'
+import { ProductList } from './ProductList'
 function App() {
   
 
@@ -24,6 +25,7 @@ function App() {
         <UserDetails name= "clark" isOnline={true} isnew={true} role="admin"></UserDetails>
         <UserDetails name= "peter" isOnline={true} isPremium={true} isnew={true} role="hero"></UserDetails>
       </div>
+      <ProductList/>
     
     </>
   );
