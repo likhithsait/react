@@ -5,12 +5,15 @@ import { UserCard } from './UserCard'
 import { CardWrapper } from './CardWrapper'
 import { UserDetails } from './UserDetails'
 import { ProductList } from './ProductList'
+import { Alert } from './Alert'
 function App() {
   
 
   return (
     <>
       <div>
+        <Alert type='fail'>ALERT ALERT ALERT</Alert>
+         <Alert type='success'>ALERT ALERT ALERT</Alert>
         <h1>
             react tutorial
         </h1>
