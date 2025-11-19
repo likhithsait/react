@@ -8,6 +8,9 @@ import { ProductList } from './ProductList'
 import { Alert } from './Alert'
 import { Like } from './Like'
 import { CustomButton } from './CustomButton'
+import { ContactUs } from './ContactUs'
+import { NewsLetter } from './NewsLetter'
+import { Menue } from './Menue'
 function App() {
   
 
@@ -29,6 +32,9 @@ function App() {
           <p>batman@jl.com</p>
           <button>Edit Profile</button>
         </CardWrapper>
+        <NewsLetter/>
+        <ContactUs></ContactUs>
+        <Menue/>
         <UserDetails name="bruce" isOnline={false} isPremium={true} role="ViP"></UserDetails>
         <UserDetails name= "clark" isOnline={true} isnew={true} role="admin"></UserDetails>
         <UserDetails name= "peter" isOnline={true} isPremium={true} isnew={true} role="hero"></UserDetails>
