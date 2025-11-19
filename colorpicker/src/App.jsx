@@ -1,5 +1,6 @@
 import './App.css'
 import { Button } from './Button'
+import { ColorPicker } from './ColorPicker'
 import { List } from './List'
 
 function App() {
@@ -8,8 +9,7 @@ function App() {
   return (
      <> 
      
-     <Button/>
-     
+     <ColorPicker/>
      </>
   )
 }
