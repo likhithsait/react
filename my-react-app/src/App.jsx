@@ -6,6 +6,8 @@ import { CardWrapper } from './CardWrapper'
 import { UserDetails } from './UserDetails'
 import { ProductList } from './ProductList'
 import { Alert } from './Alert'
+import { Like } from './Like'
+import { CustomButton } from './CustomButton'
 function App() {
   
 
@@ -18,6 +20,9 @@ function App() {
             react tutorial
         </h1>
         <Welcome name="Peter Parker" alias= "Spider-man"/>
+        <Like></Like>
+        <br></br>  
+        <CustomButton text="Subcribe"></CustomButton>
         <UserCard name="pinku" age={28} city= "delhi" email="pinkupanda@gmail.com"/>
         <CardWrapper Title="User Profile">
           <p>Bruce Wayne</p>
