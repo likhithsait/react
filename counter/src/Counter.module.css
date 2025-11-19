@@ -1,5 +1,6 @@
 .counterBox {
-  width: 200px;
+  width: 400px;
+  height: auto;
   margin: 40px auto;
   padding: 20px;
   text-align: center;
@@ -37,6 +38,10 @@
 
 .increment {
   background-color: #4caf50;
+  color: #dadada;
+}
+.reset {
+  background-color: #000000;
   color: #dadada;
 }
 

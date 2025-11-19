@@ -11,6 +11,9 @@ export const Counter = ()=>{
     const Decrement=()=>{
         setCount(count-1);
     }
+    const Reset=()=>{
+        setCount(count-count);
+    }
     return(
         <div className={styles.counterBox}>
 
@@ -18,7 +21,11 @@ export const Counter = ()=>{
             <button onClick={Decrement} className={`${styles.btn} ${styles.decrement}`} >
                 -
             </button> 
-         
+            
+            <button onClick={Reset} className={`${styles.btn} ${styles.reset}`}>
+                ↺
+            </button>
+
             <button onClick={Increment} className={`${styles.btn} ${styles.increment}`}>
                 +
             </button>
