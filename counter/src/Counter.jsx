@@ -6,13 +6,13 @@ export const Counter = ()=>{
 
     const [count, setCount]=useState(0);
     const Increment=()=>{
-        setCount(count+1);
+        setCount(c=>c+1);
         };
     const Decrement=()=>{
-        setCount(count-1);
+        setCount(c=>c-1);
     }
     const Reset=()=>{
-        setCount(count-count);
+        setCount(0);
     }
     return(
         <div className={styles.counterBox}>
