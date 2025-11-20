@@ -3,6 +3,10 @@ export const Food=()=>{
     const[foo,setFoo] = useState(["Apple", "Orange", "Banana"]);
     const handleAdd=()=>{
         const newFood = document.getElementById("foodinp").value;
+        if(newFood.trim()===("")){
+            alert("food is empty") ;
+            return;        
+        }
         document.getElementById("foodinp").value=" ";
         setFoo(f=>[...f,newFood]);
     }

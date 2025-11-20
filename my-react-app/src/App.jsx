@@ -13,13 +13,14 @@ import { NewsLetter } from './NewsLetter'
 import { Menue } from './Menue'
 import { Favcar } from './favcar'
 import { Food } from './Food'
+import { Carobj } from './Carobj'
 function App() {
   
 
   return (
     <>
       <div>
-        <Favcar/>
+        <Carobj/>
         <Food/>
       </div>
       
