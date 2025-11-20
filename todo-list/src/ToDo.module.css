@@ -1,0 +1,115 @@
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Input section */
+input[type="text"] {
+  width: 65%;
+  padding: 10px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255) !important;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: rgb(0, 0, 0);
+}
+
+.add-button {
+  padding: 10px 16px;
+  background: #007bff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  background: #005fcc;
+}
+
+/* Task list */
+ol {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+li {
+  background: #000000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Task text */
+.text {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Delete button */
+.Delete-butotn {
+  padding: 6px 10px;
+  background: #ff4d4d;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Delete-butotn:hover {
+  background: #d93636;
+}
+
+/* Move up button */
+.moveup-butotn {
+  padding: 6px 10px;
+  background: #28a745;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.moveup-butotn:hover {
+  background: #1f8637;
+}
+
+/* Move down button */
+.movedown-butotn {
+  padding: 6px 10px;
+  background: #ffc107;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.movedown-butotn:hover {
+  background: #d6a206;
+}
+
+
+.container {
+  max-width: 400px;
+  color: rgb(255, 255, 255);
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #000000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-family: Arial, sans-serif;
+}
+
+button {
+  width: 100px; /* or any size you want */
+  text-align: center;
+}
