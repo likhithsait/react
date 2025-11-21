@@ -17,6 +17,7 @@ import { Carobj } from './Carobj'
 import DigitalClock from './DigitalClock'
 import {Comp1} from './Comp1'
 import  NameContext from'./NameContext'
+import { Myref } from './MyRef'
 function App() {
   const name="Likhith";
   
@@ -24,9 +25,7 @@ function App() {
   return (
     <>
       <div>
-        <NameContext.Provider value={name}>
-           <Comp1/>
-        </NameContext.Provider>
+      <Myref/>
       </div>
       
     
