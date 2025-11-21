@@ -1,0 +1,24 @@
+.clock-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background example — change as you want */
+    background: linear-gradient(135deg, #111, #333);
+    background-position: center;
+}
+
+.clock {
+    font-size: 6rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 5px;
+
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}

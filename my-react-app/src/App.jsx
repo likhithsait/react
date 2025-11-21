@@ -14,14 +14,19 @@ import { Menue } from './Menue'
 import { Favcar } from './favcar'
 import { Food } from './Food'
 import { Carobj } from './Carobj'
+import DigitalClock from './DigitalClock'
+import {Comp1} from './Comp1'
+import  NameContext from'./NameContext'
 function App() {
+  const name="Likhith";
   
 
   return (
     <>
       <div>
-        <Carobj/>
-        <Food/>
+        <NameContext.Provider value={name}>
+           <Comp1/>
+        </NameContext.Provider>
       </div>
       
     
