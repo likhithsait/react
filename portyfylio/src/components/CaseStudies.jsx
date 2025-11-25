@@ -24,11 +24,11 @@ const CaseStudies = () => {
             Supports multimodal input for both text and image-based queries.
           </p>
           <Link to="/healthpal">
-          <button className="primary-btn small btn-orange">View case study →</button>
+          <button className="primary-btn btn-orange">View case study →</button>
           </Link>
         </div>
 
-        <img src={caseImg1}  className="case-img"></img>
+        <img src={caseImg2}  className="case-img"></img>
       </div>
       <div className="case-card case-cardrev">
         <div className="case-left">
@@ -45,7 +45,7 @@ const CaseStudies = () => {
           </Link>
         </div>
 
-        <img src={caseImg2} className="case-img"></img>
+        <img src={caseImg1} className="case-img"></img>
       </div>
     </section>
   );

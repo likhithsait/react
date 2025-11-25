@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,24 +6,26 @@ body {
   color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   padding: 20px 140px;
   background: #181818;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
-/* Navigation Links Container */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 40px;         
+  gap: 40px;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links a {
@@ -31,28 +34,29 @@ body {
   font-size: 16px;
 }
 
-
 /* HERO */
 .hero {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 70px 60px;
-  align-items:center;
+  gap: 60px;
   margin-bottom: 70px;
 }
-.para{
-  width: 50%;
+
+.hero-left {
+  width: 45%;
+}
+
+.para {
   text-align: left;
   color: grey;
 }
 
-.hero-left {
-  width: 50%;
-  padding-left: 10%;
-}
-
 .hero-right {
-  width: 40%;
-  padding-left:10%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-photo {
@@ -60,9 +64,10 @@ body {
   height: 320px;
   background: #555;
   border-radius: 50%;
- 
 }
-.hero-btn{
+
+/* HERO BUTTON */
+.hero-btn {
   padding: 14px 25px;
   border: none;
   border-radius: 6px;
@@ -70,17 +75,18 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
-  color: rgb(255, 255, 255);
+  color: white;
   font-weight: bold;
   box-shadow: 0 0 12px rgba(37, 152, 33, 0.6);
-
-}
-.hero-btn:hover {
-  box-shadow: 0 0 20px rgba(37, 152, 33, 1);
-  transform: translateY(-2px);
   transition: 0.2s ease;
 }
 
+.hero-btn:hover {
+  box-shadow: 0 0 20px rgba(37, 152, 33, 1);
+  transform: translateY(-2px);
+}
+
+/* GENERAL BUTTON */
 .primary-btn {
   padding: 14px 25px;
   border: none;
@@ -89,43 +95,76 @@ body {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
-  color: rgb(255, 255, 255);
+  color: white;
   font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  box-shadow: 0 0 20px #33d42c;
+  transform: translateY(-2px);
 }
 
 .primary-btn.small {
   padding: 10px 18px;
 }
 
+/* ORANGE BUTTON */
 .btn-orange {
-  background-color:orange; 
-  color: white;
+  background-color: orange;
+}
+.btn-orange:hover {
+  box-shadow: 0 0 20px rgb(192, 125, 0);
 }
 
+/* BLUE BUTTON */
 .btn-blue {
-  background-color:  rgb(0, 0, 255);
-  color: white;
+  background-color: rgb(0, 191, 255);
+}
+.btn-blue:hover {
+  box-shadow: 0 0 20px rgb(0, 220, 255);
 }
 
+/* SKILLS SECTION (HORIZONTAL SCROLL) */
 .clients {
   padding: 50px 60px;
-  color: #666;
 }
 
 .client-grid {
-  margin-top: 20px;
   display: flex;
-  gap: 90px;
-  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
-.client-box {
-  padding: 30px 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid #2a2929;
+/* Scrollbar */
+.client-grid::-webkit-scrollbar {
+  height: 4px;
+}
+.client-grid::-webkit-scrollbar-thumb {
+  background: #444;
   border-radius: 10px;
-  width: 80px;
+}
+
+/* Skill Item */
+.client-box {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #2a2929;
+  border-radius: 8px;
+  color: white;
+  background: #1a1a1a;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: box-shadow 0.25s ease;
+}
+
+.client-box:hover {
+  box-shadow: 0 0 10px rgba(129, 131, 129, 0.8);
 }
 
 /* CASE STUDIES */
@@ -134,7 +173,8 @@ body {
   background-color: white;
   color: black;
 }
-.headingcs{
+
+.headingcs {
   text-align: center;
   font-weight: bolder;
   font-size: 34px;
@@ -148,22 +188,23 @@ body {
   color: grey;
 }
 
+/* Case Cards */
 .case-card {
   display: flex;
   justify-content: center;
-  padding: 25px;         
+  align-items: center;
+  gap: 40px;
+  padding: 25px;
   margin-top: 40px;
-  
 }
 
 .case-cardrev {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   gap: 40px;
- 
-
+  margin-top: 40px;
 }
-
 
 .case-left {
   width: 50%;
@@ -174,10 +215,10 @@ body {
   height: 300px;
   background: #666;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-
-
+/* Tags */
 .tag {
   background: rgb(255, 227, 176);
   padding: 4px 10px;
@@ -193,54 +234,40 @@ body {
   font-weight: 600;
 }
 
-
-
 /* RECENT WORK */
 .recent-section {
-  background-color: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-   padding: 40px 60px 20px 60px;
+  background-color: black;
+  color: white;
+  padding: 40px 60px 20px 60px;
 }
 
-
-/* 2 cards side-by-side, clean gap */
 .recent-grid {
   display: flex;
+  justify-content: center;
   gap: 30px;
   margin-top: 20px;
-  justify-content: center;
 }
 
-
-/* Each card takes equal space */
+/* Cards */
 .recent-card {
-  width: 45%;             /* cleaner than 50% */
+  width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: center;     /* centers image + text */
-  text-align: center;      /* centers text */
+  align-items: center;
+  text-align: center;
 }
 
-/* Image styling */
+/* Images */
 .recent-img {
-  width: 100%;             /* full width of card */
-  height: 280px;           /* better proportion */
-  background: #ddd;        /* lighter placeholder */
-  border-radius: 12px;
-  margin-bottom: 15px;     /* spacing below image */
-  overflow: hidden;        /* for real image fit */
-  object-fit: cover;
-}
-
-/* If you place a real image inside */
-.recent-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;       /* perfect fit */
+  height: 280px;
+  background: #ddd;
   border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
-/* Text spacing inside the card */
 .recent-card h3 {
   margin: 10px 0 8px 0;
   font-size: 20px;
@@ -250,15 +277,13 @@ body {
 .recent-card p {
   margin-bottom: 15px;
   color: grey;
-  width: 90%;             /* cleaner text width */
+  width: 90%;
 }
-
 
 /* TESTIMONIALS */
 .testimonials {
   padding: 40px 60px;
 }
-
 
 .test-grid {
   display: grid;
@@ -283,30 +308,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
   align-items: center;
-}
-.contact-form label {
-  width: 30%;        /* SAME AS INPUT WIDTH */
-  text-align: left;  /* Left align label */
+  margin-top: 20px;
 }
 
+.contact-form label {
+  width: 30%;
+  text-align: left;
+}
 
 input,
 textarea {
   width: 30%;
   padding: 12px;
-  background: #ffffff;
+  background: white;
   border: 1px solid #444;
-  color: rgb(0, 0, 0);
+  color: black;
 }
 
 textarea {
   height: 120px;
 }
-
-
-html {
-  scroll-behavior: smooth;
-}
-
