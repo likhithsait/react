@@ -1,4 +1,9 @@
-/* GLOBAL */
+/* =========================================
+   GLOBAL RESET
+========================================= */
+* { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,11 +11,11 @@ body {
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* NAVBAR */
+/* =========================================
+   NAVBAR
+========================================= */
 .navbar {
   display: flex;
   justify-content: center;
@@ -23,8 +28,8 @@ html {
 
 .nav-links {
   display: flex;
-  list-style: none;
   gap: 40px;
+  list-style: none;
   align-items: center;
 }
 
@@ -34,7 +39,9 @@ html {
   font-size: 16px;
 }
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 .hero {
   display: flex;
   justify-content: center;
@@ -45,19 +52,20 @@ html {
 }
 
 .hero-left {
-  width: 45%;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .para {
-  text-align: left;
   color: grey;
+  width: 80%;
+  line-height: 24px;
 }
 
-.hero-right {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-}
+.hero-right { display: flex; justify-content: center; }
 
 .hero-photo {
   width: 320px;
@@ -66,19 +74,23 @@ html {
   border-radius: 50%;
 }
 
-/* HERO BUTTON */
-.hero-btn {
+/* Hero Button */
+.hero-btn,
+.primary-btn {
   padding: 14px 25px;
   border: none;
   border-radius: 6px;
-  background: #259821;
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
   color: white;
   font-weight: bold;
-  box-shadow: 0 0 12px rgba(37, 152, 33, 0.6);
   transition: 0.2s ease;
+}
+
+.hero-btn {
+  background: #259821;
+  box-shadow: 0 0 12px rgba(37, 152, 33, 0.6);
 }
 
 .hero-btn:hover {
@@ -86,111 +98,80 @@ html {
   transform: translateY(-2px);
 }
 
-/* GENERAL BUTTON */
-.primary-btn {
-  padding: 14px 25px;
-  border: none;
-  border-radius: 6px;
-  background: #33d42c;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  color: white;
-  font-weight: bold;
-  transition: 0.2s ease;
-}
-
+.primary-btn { background: #33d42c; }
 .primary-btn:hover {
   box-shadow: 0 0 20px #33d42c;
   transform: translateY(-2px);
 }
+.primary-btn.small { padding: 10px 18px; }
 
-.primary-btn.small {
-  padding: 10px 18px;
-}
+/* Color Variants */
+.btn-orange { background: orange; }
+.btn-orange:hover { box-shadow: 0 0 20px rgb(192, 125, 0); }
 
-/* ORANGE BUTTON */
-.btn-orange {
-  background-color: orange;
-}
-.btn-orange:hover {
-  box-shadow: 0 0 20px rgb(192, 125, 0);
-}
+.btn-blue { background: rgb(0, 191, 255); }
+.btn-blue:hover { box-shadow: 0 0 20px rgb(0, 220, 255); }
 
-/* BLUE BUTTON */
-.btn-blue {
-  background-color: rgb(0, 191, 255);
-}
-.btn-blue:hover {
-  box-shadow: 0 0 20px rgb(0, 220, 255);
-}
-
-/* SKILLS SECTION (HORIZONTAL SCROLL) */
-.clients {
-  padding: 50px 60px;
-}
+/* =========================================
+   SKILLS (Clients Scroll Section)
+========================================= */
+.clients { padding: 50px 60px; }
 
 .client-grid {
   display: flex;
   gap: 10px;
-  padding-top: 20px;
+  padding: 20px 0 10px;
   overflow-x: auto;
   white-space: nowrap;
-  padding-bottom: 10px;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+  align-items: center;
 }
-
-/* Scrollbar */
-.client-grid::-webkit-scrollbar {
-  height: 4px;
-}
+.client-grid::-webkit-scrollbar { height: 4px; }
 .client-grid::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 10px;
 }
 
-/* Skill Item */
 .client-box {
-  display: inline-block;
   padding: 12px 24px;
   border: 1px solid #2a2929;
   border-radius: 8px;
-  color: white;
-  background: #1a1a1a;
-  font-size: 14px;
-  cursor: pointer;
   white-space: nowrap;
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
   transition: box-shadow 0.25s ease;
 }
-
 .client-box:hover {
   box-shadow: 0 0 10px rgba(129, 131, 129, 0.8);
 }
 
-/* CASE STUDIES */
+/* =========================================
+   CASE STUDIES
+========================================= */
 .case-section {
   padding: 70px 60px;
-  background-color: white;
+  background: white;
   color: black;
 }
 
 .headingcs {
   text-align: center;
-  font-weight: bolder;
   font-size: 34px;
+  font-weight: bold;
 }
 
 .section-sub {
-  margin: -10px auto 0 auto;
+  margin: -10px auto 0;
   opacity: 0.7;
   text-align: center;
   width: 40%;
   color: grey;
 }
 
-/* Case Cards */
-.case-card {
+.case-card,
+.case-cardrev {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,98 +180,67 @@ html {
   margin-top: 40px;
 }
 
-.case-cardrev {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 40px;
-  margin-top: 40px;
-}
+.case-cardrev { flex-direction: row-reverse; }
 
-.case-left {
-  width: 50%;
-}
+.case-left { width: 50%; }
 
 .case-img {
   width: 30%;
   height: 300px;
-  background: #666;
   border-radius: 10px;
   object-fit: cover;
+  background: #666;
 }
 
-/* Tags */
-.tag {
-  background: rgb(255, 227, 176);
+.tag, .tagblue {
   padding: 4px 10px;
   border-radius: 60px;
-  color: orange;
-  font-weight: 600;
-}
-.tagblue {
-  background: rgb(204, 238, 249);
-  padding: 4px 10px;
-  border-radius: 60px;
-  color: rgb(0, 191, 255);
   font-weight: 600;
 }
 
-/* RECENT WORK */
+.tag { background: rgb(255, 227, 176); color: orange; }
+.tagblue { background: rgb(204, 238, 249); color: rgb(0, 191, 255); }
+
+/* =========================================
+   RECENT WORK
+========================================= */
 .recent-section {
-  background-color: black;
+  background: black;
   color: white;
-  padding: 40px 60px 20px 60px;
+  padding: 40px 60px;
 }
 
 .recent-grid {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 20px;
 }
 
-/* Cards */
 .recent-card {
   width: 45%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
 
-/* Images */
 .recent-img {
   width: 100%;
   height: 280px;
-  background: #ddd;
   border-radius: 12px;
-  margin-bottom: 15px;
   object-fit: cover;
-  overflow: hidden;
-}
-
-.recent-card h3 {
-  margin: 10px 0 8px 0;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.recent-card p {
   margin-bottom: 15px;
-  color: grey;
-  width: 90%;
 }
 
-/* TESTIMONIALS */
-.testimonials {
-  padding: 40px 60px;
-}
+/* =========================================
+   TESTIMONIALS
+========================================= */
+.testimonials { padding: 40px 60px; }
 
 .test-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
-  margin-top: 30px;
 }
 
 .test-box {
@@ -299,7 +249,9 @@ html {
   border-radius: 10px;
 }
 
-/* CONTACT FORM */
+/* =========================================
+   CONTACT FORM
+========================================= */
 .contact {
   padding: 70px 60px;
   text-align: center;
@@ -310,7 +262,6 @@ html {
   flex-direction: column;
   gap: 15px;
   align-items: center;
-  margin-top: 20px;
 }
 
 .contact-form label {
@@ -326,7 +277,223 @@ textarea {
   border: 1px solid #444;
   color: black;
 }
+textarea { height: 120px; }
 
-textarea {
-  height: 120px;
+/* =========================================
+   CASE STUDY PAGES (Shared)
+========================================= */
+.case-page {
+  padding: 60px 80px;
+  max-width: 900px;
+  margin: auto;
+  color: white;
+}
+
+.back-btn { margin-bottom: 25px; }
+
+.case-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.case-section-title {
+  font-size: 26px;
+  margin: 30px 0 10px;
+  font-weight: 700;
+  color: #00eaff;
+}
+
+.case-page p { line-height: 1.6; color: #d2d2d2; }
+
+.case-page ul {
+  margin-left: 20px;
+  color: #c9c9c9;
+}
+.case-page ul li { margin-bottom: 8px; }
+
+.case-screenshot {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 15px 0 20px;
+  border: 1px solid #444;
+  box-shadow: 0 0 10px rgba(255,255,255,0.08);
+}
+
+.case-btn-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+========================================= */
+
+/* Fix skills overflow on large screens */
+@media (max-width: 1490px) {
+  .client-grid { justify-content: flex-start; padding-left: 20px; }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero { flex-direction: column; }
+  .case-card, .case-cardrev { flex-direction: column; }
+  .case-img { width: 80%; }
+
+  .recent-grid { flex-direction: column; }
+  .recent-card { width: 100%; }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .navbar { padding: 20px; }
+  .nav-links { gap: 15px; }
+
+  .hero {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .hero-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .case-section { padding: 40px 20px; }
+  .section-sub { width: 80%; }
+
+  input, textarea { width: 80%; }
+
+  .test-grid { grid-template-columns: 1fr; }
+  .case-page { padding: 30px; }
+}
+
+@media (max-width: 445px) {
+
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;   /* prevent right side scrolling */
+  }
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 30px 15px;
+    gap: 20px;
+    flex-direction: column;    /* stack vertically */
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 22px;
+  }
+
+  .para {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* SKILLS */
+  .clients {
+    padding: 35px 20px;
+  }
+
+  .client-grid {
+    gap: 8px;
+    padding-left: 5px;
+    justify-content: flex-start;
+  }
+
+  .client-box {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+  /* CASE STUDIES */
+  .case-section {
+    padding: 40px 15px;
+  }
+
+  .headingcs {
+    font-size: 26px;
+  }
+
+  .section-sub {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .case-card,
+  .case-cardrev {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .case-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .case-img {
+    width: 90%;
+    height: 200px;
+  }
+
+  /* RECENT WORK */
+  .recent-section {
+    padding: 30px 20px;
+  }
+
+  .recent-card {
+    width: 100%;
+  }
+
+  .recent-img {
+    height: 220px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 30px 20px;
+  }
+
+  .test-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 50px 20px;
+  }
+
+  input,
+  textarea {
+    width: 90%;
+  }
+
+  /* CASE STUDY PAGE */
+  .case-page {
+    padding: 20px;
+  }
 }
