@@ -8,7 +8,7 @@ export const Myref=()=>{
     const handleClick=()=>{
         setNum(num+1);
         console.log("clicked");
-
+         ref.current.style.backgroundColor = "black";
     }
     useEffect(()=>{
         console.log("rendered");
