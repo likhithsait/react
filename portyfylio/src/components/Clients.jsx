@@ -1,25 +1,36 @@
 const Skills = () => {
   return (
-    <section id="skills" className="clients">
-      <h2 style={{ color: "white", textAlign: "center", marginBottom: "20px" }}>
+    <section
+      id="skills"
+      className="px-[60px] py-[50px]"
+    >
+      <h2 className="text-white text-center mb-[20px] text-2xl font-bold">
         Skills
       </h2>
 
-      <div className="client-grid">
-        <div className="client-box">Java</div>
-        <div className="client-box">Python</div>
-        <div className="client-box">JavaScript</div>
-        <div className="client-box">SQL</div>
-
-        <div className="client-box">React</div>
-        <div className="client-box">Streamlit</div>
-        <div className="client-box">Flask</div>
-        <div className="client-box">TensorFlow</div>
-        <div className="client-box">PyTorch</div>
-        <div className="client-box">Scikit-learn</div>
-        <div className="client-box">MySQL</div>
-        <div className="client-box">MongoDB</div>
-        <div className="client-box">Git</div>
+      <div className="flex gap-[10px] py-[20px] pb-[10px] overflow-x-auto whitespace-nowrap scroll-smooth justify-center items-center">
+        {[
+          "Java",
+          "Python",
+          "JavaScript",
+          "SQL",
+          "React",
+          "Streamlit",
+          "Flask",
+          "TensorFlow",
+          "PyTorch",
+          "Scikit-learn",
+          "MySQL",
+          "MongoDB",
+          "Git",
+        ].map((skill) => (
+          <div
+            key={skill}
+            className="px-[24px] py-[12px] border border-[#2a2929] rounded-[8px] whitespace-nowrap bg-[#1a1a1a] text-white cursor-pointer transition-shadow duration-200 hover:shadow-[0_0_10px_rgba(129,131,129,0.8)]"
+          >
+            {skill}
+          </div>
+        ))}
       </div>
     </section>
   );

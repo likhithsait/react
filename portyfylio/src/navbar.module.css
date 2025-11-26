@@ -1,0 +1,11 @@
+.navbar {
+  @apply sticky top-0 z-[1000] bg-[#181818] flex justify-center px-4 md:px-[140px] py-5;
+}
+
+.navLinks {
+  @apply flex items-center gap-4 md:gap-10 list-none;
+}
+
+.navLink {
+  @apply text-white text-sm md:text-base no-underline transition duration-200 hover:text-green-400;
+}
