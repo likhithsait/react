@@ -5,83 +5,81 @@ import { Link } from "react-router-dom";
 const CaseStudies = () => {
   return (
     <section
-      id="casestudy"
-      className="px-[60px] py-[70px] bg-white text-black"
-    >
-      {/* Heading */}
-      <h2 className="text-center text-[34px] font-bold">
-        Case Studies
-      </h2>
+  id="casestudy"
+  className="bg-white text-black px-[8%] py-[90px]"
+>
+  <h2 className="text-center text-[36px] font-bold mb-4">
+    Case Studies
+  </h2>
 
-      <p className="mt-[-10px] mx-auto text-center w-[40%] text-gray-500 opacity-70">
-        Showcasing AI-powered and full-stack solutions built to solve real user
-        and business problems.
+  <p className="text-center text-gray-500 max-w-[600px] mx-auto mb-16">
+    Showcasing AI-powered and full-stack solutions built to solve real user and
+    business problems.
+  </p>
+
+  {/* CARD 1 */}
+  <div className="flex flex-col md:flex-row items-center gap-16 mb-20">
+    <div className="md:w-1/2">
+      <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">
+        HealthTech
+      </span>
+
+      <h3 className="mt-4 text-xl font-bold">
+        HealthPal-AI-Powered Medical Assistant
+      </h3>
+
+      <p className="text-gray-500 leading-[26px] mt-4 mb-6">
+        Developed an intelligent medical assistant with dual Medical and
+        Therapy modes using the Gemini API. Integrated OCR (PyTesseract) to
+        extract text from prescriptions and provide context-aware responses.
+        Supports multimodal input for both text and image-based queries.
       </p>
 
-      {/* CARD 1 */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-[40px] p-[25px] mt-[40px]">
-        <div className="w-full sm:w-1/2">
-          <span className="px-[10px] py-[4px] rounded-full font-semibold bg-[rgb(255,227,176)] text-orange-500">
-            HealthTech
-          </span>
+      <Link to="/healthpal">
+        <button className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-400 transition">
+          View case study →
+        </button>
+      </Link>
+    </div>
 
-          <h3 className="mt-3 text-xl font-semibold">
-            HealthPal-AI-Powered Medical Assistant
-          </h3>
+    <img
+      src={caseImg2}
+      className="md:w-[40%] h-[300px]  object-fill rounded-xl shadow-lg"
+    />
+  </div>
 
-          <p className="text-gray-500 leading-[24px] mt-3">
-            Developed an intelligent medical assistant with dual Medical and
-            Therapy modes using the Gemini API. Integrated OCR (PyTesseract) to
-            extract text from prescriptions and provide context-aware responses.
-            Supports multimodal input for both text and image-based queries.
-          </p>
+  {/* CARD 2 */}
+  <div className="flex flex-col-reverse md:flex-row items-center gap-16">
+    <img
+      src={caseImg1}
+      className="md:w-[40%] h-[300px]  object-fill rounded-xl shadow-lg"
+    />
 
-          <Link to="/healthpal">
-            <button className="mt-[20px] px-[25px] py-[14px] rounded-[6px] bg-orange-500 text-white font-bold text-[16px] cursor-pointer transition hover:shadow-[0_0_20px_rgb(192,125,0)] hover:-translate-y-[2px]">
-              View case study →
-            </button>
-          </Link>
-        </div>
+    <div className="md:w-1/2">
+      <span className="bg-blue-100 text-blue-500 px-3 py-1 rounded-full text-sm font-semibold">
+        AutoTech
+      </span>
 
-        <img
-          src={caseImg2}
-          alt="HealthPal"
-          className="w-full sm:w-[30%] h-[300px] rounded-[10px] object-cover bg-[#666]"
-        />
-      </div>
+      <h3 className="mt-4 text-xl font-bold">
+        Car Damage Detection System
+      </h3>
 
-      {/* CARD 2 (REVERSED) */}
-      <div className="flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-[40px] p-[25px] mt-[40px]">
-        <div className="w-full sm:w-1/2">
-          <span className="px-[10px] py-[4px] rounded-full font-semibold bg-[rgb(204,238,249)] text-[rgb(0,191,255)]">
-            AutoTech
-          </span>
+      <p className="text-gray-500 leading-[26px] mt-4 mb-6">
+        Built an automated car damage detection system using the CLIP model.
+        Implemented fine-tuning, image processing, and damage localization to
+        deliver accurate assessments from user-uploaded images. Deployed using
+        Python, Flask, and Streamlit.
+      </p>
 
-          <h3 className="mt-3 text-xl font-semibold">
-            Car Damage Detection System
-          </h3>
+      <Link to="/cardamage">
+        <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-500 transition">
+          View case study →
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
 
-          <p className="text-gray-500 leading-[24px] mt-3">
-            Built an automated car damage detection system using the CLIP model.
-            Implemented fine-tuning, image processing, and damage localization to
-            deliver accurate assessments from user-uploaded images. Deployed
-            using Python, Flask, and Streamlit.
-          </p>
-
-          <Link to="/cardamage">
-            <button className="mt-[20px] px-[25px] py-[14px] rounded-[6px] bg-[rgb(0,191,255)] text-white font-bold text-[16px] cursor-pointer transition hover:shadow-[0_0_20px_rgb(0,220,255)] hover:-translate-y-[2px]">
-              View case study →
-            </button>
-          </Link>
-        </div>
-
-        <img
-          src={caseImg1}
-          alt="Car Damage"
-          className="w-full sm:w-[30%] h-[300px] rounded-[10px] object-cover bg-[#666]"
-        />
-      </div>
-    </section>
   );
 };
 

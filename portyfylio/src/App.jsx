@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";    
 import HealthPal from "./components/HealthPal";
 import CarDamage from "./components/CarDamage";
-
 import Navbar from "./components/Navbar";
 
 function App() {

@@ -1,14 +1,15 @@
-const Skills = () => {
+const Clients = () => {
   return (
-    <section
-      id="skills"
-      className="px-[60px] py-[50px]"
-    >
+    <section id="skills" className="px-[60px] py-[50px]">
       <h2 className="text-white text-center mb-[20px] text-2xl font-bold">
         Skills
       </h2>
 
-      <div className="flex gap-[10px] py-[20px] pb-[10px] overflow-x-auto whitespace-nowrap scroll-smooth justify-center items-center">
+      <div className="flex gap-[10px] py-[20px] pb-[10px] overflow-x-auto whitespace-nowrap scroll-smooth justify-center items-center
+      [&::-webkit-scrollbar]:h-[4px]
+      [&::-webkit-scrollbar-track]:bg-transparent
+      [&::-webkit-scrollbar-thumb]:bg-gray-600
+      [&::-webkit-scrollbar-thumb]:rounded-full">
         {[
           "Java",
           "Python",
@@ -36,4 +37,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Clients;
