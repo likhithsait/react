@@ -17,10 +17,15 @@ const Hero = () => {
           models that solve real-world problems.
         </p>
 
-        <a href="#contact"><button className="px-8 py-4 rounded-md bg-green-600 text-white font-semibold hover:bg-green-500 transition shadow-[0_0_25px_rgba(34,197,94,0.6)]">
-          Let's get started →
-        </button>
-        </a>
+        <div className="flex justify-center sm:justify-start">
+  <a
+    href="#contact"
+    className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-green-600 text-white font-semibold hover:bg-green-500 transition shadow-[0_0_25px_rgba(34,197,94,0.6)]"
+  >
+    Let's get started →
+  </a>
+</div>
+
       </div>
 
       <div className="mt-10 sm:mt-0">
